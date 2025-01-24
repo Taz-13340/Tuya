@@ -1,0 +1,33 @@
+name: "Tuya Climate Control"
+version: "1.0.0"
+slug: "tuya_climate_control"
+description: "Control unsupported Tuya climate devices"
+url: "https://github.com/Taz-13340/ha-tuya-climate"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+ingress: true
+ingress_port: 3000
+panel_icon: mdi:thermometer
+init: false
+options:
+  devices:
+    - name: "Living Room AC"
+      device_id: ""
+      local_key: ""
+    - name: "Bedroom AC"
+      device_id: ""
+      local_key: ""
+schema:
+  devices:
+    - name: str
+      device_id: str
+      local_key: str
+ports:
+  3000/tcp: 3000
+webui: "http://[HOST]:[PORT:3000]"
